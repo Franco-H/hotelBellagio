@@ -45,7 +45,7 @@ class Room implements IRoom {
     public boolean isFree() {
         return false;
     }
-    
+
 public boolean equals(Object obj) {
     if (obj instanceof Room) return true;
     if (obj == null || obj.getClass() != this.getClass()) return false;
