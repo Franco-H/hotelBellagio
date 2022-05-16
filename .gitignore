@@ -1,3 +1,7 @@
+# IntelliJ metadata files
+.ideal/
+*.iml
+
 # Compiled class file
 *.class
 
