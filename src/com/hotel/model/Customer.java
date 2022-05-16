@@ -3,16 +3,19 @@ package com.hotel.model;
 import java.util.Objects;
 
 class Customer {
+    public static final Customer instance = new Customer();
     private String firstName;
     private String lastName;
     private String email;
     private int phoneNumber;
+//    private Email email;
+//    private Phone phoneNumber;
 
-    Customer(String firstName, String lastName, String email, int phoneNumber) {
-       setFirstName(firstName);
-        setLastName(lastName);
-       setEmail(email);
-        this.phoneNumber = phoneNumber;
+    private Customer() {
+    }
+
+    public static Customer getInstance(){
+        return instance;
     }
 
     public String getFirstName() {
@@ -47,20 +50,8 @@ class Customer {
         this.phoneNumber = phoneNumber;
     }
 
-    public String firstName() {
-        return firstName;
-    }
-
-    public String lastName() {
-        return lastName;
-    }
-
-    public String email() {
-        return email;
-    }
-
-    public int phoneNumber() {
-        return phoneNumber;
+    public String checkEmail(){
+        return getEmail();
     }
 
     @Override //verify if == is best practice here. Records created Class
@@ -68,9 +59,9 @@ class Customer {
         if (obj instanceof Customer) return true;
         if (obj == null || obj.getClass() != this.getClass()) return false;
         var that = (Customer) obj;
-        return Objects.equals(this.firstName, that.firstName) &&
-                Objects.equals(this.lastName, that.lastName) &&
-                Objects.equals(this.email, that.email) &&
+        return this.firstName.equals(that.firstName) &&
+                this.lastName.equals(that.lastName) &&
+                this.email.equals(that.email) &&
                 this.phoneNumber == that.phoneNumber;
     }
 
