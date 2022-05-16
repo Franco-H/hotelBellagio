@@ -4,7 +4,7 @@ public interface HotelResource {
 
     private static final HotelResource SINGLETON = new HotelResource();
 
-    public Customer getCUstomer(String email) {
+    public Customer getCustomer(String email) {
         return CustomerService.getCustomer(email);
     }
 
@@ -18,11 +18,11 @@ public interface HotelResource {
 
     public Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate,
                                  Date CheckOutDate) {
-        return ReservationService.reserveARoom(getCUstomer(customerEmail), room, checkInDate, CheckOutDate);
+        return ReservationService.reserveARoom(getCustomer(customerEmail), room, checkInDate, CheckOutDate);
     }
 
     public Collection<Reservation> getCustomersReservations(String customerEmail) {
-        return ReservationService.getCustomersReservations(getCUstomer(customerEmail));
+        return ReservationService.getCustomersReservations(getCustomer(customerEmail));
     }
 
     public Collection<IRoom> findARoom(Date checkIn, Date checkOut) {
