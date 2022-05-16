@@ -31,12 +31,8 @@ import java.util.Objects;
      @Override
     public boolean equals(Object obj) {
         if (obj instanceof Room) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
-        var that = (Room) obj;
-        return this.roomNumber == that.roomNumber &&
-                Double.doubleToLongBits(this.price) == Double.doubleToLongBits(that.price);
-
-    }
+         return false;
+     }
 
     @Override
     public int hashCode() {
