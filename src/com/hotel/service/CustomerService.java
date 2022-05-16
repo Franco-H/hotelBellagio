@@ -3,7 +3,6 @@ package com.hotel.service;
 import com.hotel.resource.HotelResource;
 
 class CustomerService implements HotelResource {
-
     @Override
     public Customer getCustomer(String email) {
         return null;
@@ -33,4 +32,5 @@ class CustomerService implements HotelResource {
     public Collection<IRoom> findARoom(Date checkIn, Date checkOut) {
         return null;
     }
+
 }

@@ -3,7 +3,6 @@ package com.hotel.service;
 import com.hotel.resource.AdminResource;
 
 class ReservationService implements AdminResource {
-
     @Override
     public Customer getCustomer(String email) {
         return null;
@@ -28,4 +27,6 @@ class ReservationService implements AdminResource {
     public void displayAllReservations() {
 
     }
+}
+
 }
