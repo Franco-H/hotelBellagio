@@ -19,7 +19,7 @@ public final class FreeRoom {
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return "FreeRoom[]";
     }
 }
