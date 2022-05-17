@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
 
-class Customer {
+public class Customer {
     public static final Customer instance = new Customer();
     private String firstName;
     private String lastName;
