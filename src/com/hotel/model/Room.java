@@ -8,13 +8,21 @@ class Room implements IRoom {
     private double price;
     private String description;
     private RoomType roomType;
+    private String description;
+    private static final double freeRoom = .01;
 
-    public Room(int roomNumber, double price, String description, RoomType roomType) {
+    public Room(int roomNumber, double price, RoomType roomType, String description) {
         this.roomNumber = roomNumber;
         this.price = price;
-        this.description = description;
         this.roomType = roomType;
+        this.description = description;
     }
+//    private Room() {
+//    }
+//
+//    public Room getInstance() {
+//        return instance;
+//    }
 
     public int getRoomNumber() {
         return roomNumber;
@@ -44,7 +52,7 @@ class Room implements IRoom {
 
     @Override //Identify condition
     public boolean isFree() {
-        return false;
+        return price < freeRoom;
     }
 
 public boolean equals(Object obj) {

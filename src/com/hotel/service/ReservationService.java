@@ -8,6 +8,7 @@ import com.hotel.resource.AdminResource;
 import java.time.LocalDate;
 import java.util.*;
 
+
 class ReservationService {
     Collection<IRoom> room = new LinkedList<>();
     Collection<Reservation> reservations = new LinkedList<>();
@@ -19,8 +20,8 @@ class ReservationService {
     }
 
     public IRoom getARoom(String roomId) {
-        for (IRoom room : room){
-            if (room.getRoomNumber().equals(roomId)){
+        for (IRoom room : room) {
+            if (room.getRoomNumber().equals(roomId)) {
                 return room;
             }
         }
@@ -43,7 +44,7 @@ class ReservationService {
         for (IRoom room : rooms) {
             boolean reserved = false;
             for (Reservation reservation : reservations) {
-                if (reservation.getRoom() ( reservation.getCheckOut().isAfter(){
+                if (reservation.getRoom() (reservation.getCheckOut().isAfter() {
                     reserved = true;
                     break;
 
@@ -66,22 +67,22 @@ class ReservationService {
         return filteredReservations;
     }
 
-    public void printAllReservations(){
+    public void printAllReservations() {
         System.out.println("This are the available reservations: ");
 
-        if (reservations.isEmpty()){
+        if (reservations.isEmpty()) {
             System.out.println("No Rooms available. Check back later");
         }
 
-        for (Reservation reservation: reservations){
+        for (Reservation reservation : reservations) {
             System.out.println(reservation);
         }
 
     }
 
     public Collection<IRoom> getRoom() {
-        for (IRoom room : room){
-            if (room.equals(room.getRoomNumber())){
+        for (IRoom room : room) {
+            if (room.equals(room.getRoomNumber())) {
             }
         }
         return room;
@@ -98,4 +99,3 @@ class ReservationService {
 }
 
 
-}

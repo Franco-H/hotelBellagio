@@ -48,7 +48,7 @@ public class Reservation {
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Reservation) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
+        if (obj.equals(null) || !obj.getClass().equals(this.getClass())) return false;
         var that = (Reservation) obj;
         return this.checkIn.equals(that.checkIn) &&
                this.checkOut.equals(that.checkOut);
