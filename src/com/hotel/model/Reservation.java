@@ -4,17 +4,23 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Reservation {
-    public static final Reservation instance = new Reservation();
+//    public static final Reservation instance = new Reservation();
     private Customer customer;
 //    private Room room;
     private LocalDate checkIn;
     private LocalDate checkOut;
 
-    private Reservation() {
+    public Reservation(Customer customer, LocalDate checkIn, LocalDate checkOut) {
+        this.customer = customer;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
     }
-    public static Reservation getInstance(){
-        return instance;
-    }
+
+    //    private Reservation() {
+//    }
+//    public static Reservation getInstance(){
+//        return instance;
+//    }
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }

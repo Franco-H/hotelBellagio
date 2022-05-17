@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Objects;
 
 public class Customer {
-    public static final Customer instance = new Customer();
+//    public static final Customer instance = new Customer();
     private static final String nameRegexPattern = "^[a-zA-Z0-9]+S";
     private String firstName;
     private String lastName;
@@ -14,12 +14,19 @@ public class Customer {
 //    private Email email;
 //    private Phone phoneNumber;
 
-    private Customer() {
+    public Customer(String firstName, String lastName, String email, int phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
-    public static Customer getInstance(){
-        return instance;
-    }
+//    private Customer() {
+//    }
+//
+//    public static Customer getInstance(){
+//        return instance;
+//    }
 
     public String getFirstName() {
         return firstName;

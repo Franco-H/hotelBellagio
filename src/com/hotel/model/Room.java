@@ -3,18 +3,25 @@ package com.hotel.model;
 import java.util.Objects;
 
 class Room implements IRoom {
-    public static final Room instance = new Room();
+//    public static final Room instance = new Room();
     private int roomNumber;
     private double price;
     private RoomType roomType;
+    private String description;
     private static final double freeRoom = .01;
 
-    private Room() {
+    public Room(int roomNumber, double price, RoomType roomType, String description) {
+        this.roomNumber = roomNumber;
+        this.price = price;
+        this.roomType = roomType;
+        this.description = description;
     }
-
-    public Room getInstance() {
-        return instance;
-    }
+//    private Room() {
+//    }
+//
+//    public Room getInstance() {
+//        return instance;
+//    }
 
     public int getRoomNumber() {
         return roomNumber;
