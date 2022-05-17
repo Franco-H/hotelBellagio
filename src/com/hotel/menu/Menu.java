@@ -2,6 +2,7 @@ package com.hotel.menu;
 
 
 import com.hotel.model.IRoom;
+import com.hotel.model.Reservation;
 import com.hotel.resource.Hotel;
 
 import java.text.ParseException;
@@ -27,7 +28,7 @@ public class Menu {
             while (line.matches("[1-5]")) {
                 switch (line) {
                     case "1":
-                        findAndReserveRoom();
+                        findRoom();
                         break;
                     case "2":
                         viewMyReservation();
@@ -52,7 +53,7 @@ public class Menu {
         }
     }
 
-    private static void findAndReserveRoom() throws ParseException {
+    private static void findRoom() throws ParseException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter check in date (mm/dd/yyyy): ");
@@ -69,7 +70,7 @@ public class Menu {
             System.out.println("Available rooms:");
             for (IRoom room : availableRooms) {
                 System.out.println(room.toString());
-                reserve(checkInDate, checkOutDate);
+                reserveRoom(checkInDate, checkOutDate);
             }
         } else {
             System.out.println("No available rooms.");
@@ -78,7 +79,7 @@ public class Menu {
         }
     }
 
-    private static void reserve(String checkInDate, String checkOutDate) {
+    private static void reserveRoom(String checkInDate, String checkOutDate) {
         // Ask if the customer wants to reserve the room
         Scanner scanner = new Scanner(System.in);
         System.out.println("Would you like to reserve a room? (y/n)");
@@ -100,8 +101,8 @@ public class Menu {
                     System.out.println("Enter the room number you would like to reserve: ");
                     String roomNumber = scanner.nextLine();
                     // If the room number match the room number in the collection, reserve the room
-                    IRoom room = hotelResource.getRoom(roomNumber);
-                    Reservation reservation  hotelResource.bookARoom(room, checkInDate, checkOutDate);
+                    IRoom room = HOTEL.getRoom(roomNumber);
+                    Reservation reservation = HOTEL.bookARoom(email, room, checkInDate, checkOutDate);
                     System.out.println("Room reserved. We are looking forward to your stay!");
                     System.out.println(reservation.toString());
                 }

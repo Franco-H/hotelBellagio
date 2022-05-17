@@ -49,6 +49,11 @@ public class Hotel implements HotelResource {
         return RESERVATION_SERVICE.findARoom(checkIn, checkOut);
     }
 
+    @Override
+    public Reservation bookARoom(String email, IRoom room, Date checkInDate, Date CheckOutDate) {
+        return RESERVATION_SERVICE.bookARoom(customerEmail, room, checkInDate, checkOutDate);
+    }
+
     public Collection<IRoom> findOtherRooms(final Date checkIn, final Date checkOut) {
         return RESERVATION_SERVICE.findAlternativeRooms(checkIn, checkOut);
     }
