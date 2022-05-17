@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-class ReservationService {
+public class ReservationService {
     Collection<IRoom> room = new ArrayList<>();
 
     public ReservationService(Collection<IRoom> room) {

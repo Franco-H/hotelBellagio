@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-class CustomerService {
+public class CustomerService {
     private String email;
     private String firstName;
     private String lastName;

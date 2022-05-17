@@ -3,6 +3,8 @@ package com.hotel.resource;
 import com.hotel.model.Customer;
 import com.hotel.model.IRoom;
 import com.hotel.model.Reservation;
+import com.hotel.service.CustomerService;
+import com.hotel.service.ReservationService;
 
 import java.util.Collection;
 import java.util.Date;

@@ -7,6 +7,7 @@ class Room implements IRoom {
     private int roomNumber;
     private double price;
     private RoomType roomType;
+    private static final double freeRoom = .01;
 
     private Room() {
     }
@@ -43,7 +44,7 @@ class Room implements IRoom {
 
     @Override //Identify condition
     public boolean isFree() {
-        return false;
+        return price < freeRoom;
     }
 
 public boolean equals(Object obj) {

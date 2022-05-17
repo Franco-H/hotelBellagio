@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public class Customer {
     public static final Customer instance = new Customer();
+    private static final String nameRegexPattern = "^[a-zA-Z0-9]+S";
     private String firstName;
     private String lastName;
     private String email;
@@ -24,16 +25,24 @@ public class Customer {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstName(String firstName) throws Exception {
+       if (!firstName.matches(nameRegexPattern)){
+           throw new Exception("First name has to be alpha numeric");
+       }else{
+           this.firstName = firstName;
+       }
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String lastName) throws Exception {
+        if (!lastName.matches(nameRegexPattern)){
+            throw new Exception("First name has to be alpha numeric");
+        }else{
+            this.lastName = lastName;
+        }
     }
 
     public String getEmail() {
