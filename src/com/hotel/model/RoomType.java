@@ -2,7 +2,7 @@ package com.hotel.model;
 
 public enum RoomType {
     RESORT_KING,
-    RESORT_TWO_QUEEN_ROOM,
+    RESORT_TWO_QUEEN,
     FOUNTAIN_VIEW_KING,
     FOUNTAIN_VIEW_TWO_QUEEN,
     RESORT_TOWER_KING,
