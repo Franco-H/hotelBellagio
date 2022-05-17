@@ -2,7 +2,7 @@ package com.hotel.menu;
 
 import com.hotel.model.Reservation;
 import com.hotel.resource.HotelResource;
-import com.hotel.service.ReservationService;
+import com.hotel.resource.ReservationService;
 
 import java.text.ParseException;
 import java.util.Collection;
