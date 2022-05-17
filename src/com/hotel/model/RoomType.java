@@ -1,6 +1,7 @@
 package com.hotel.model;
 
 public enum RoomType {
+  
     OVER_LOOKING_WATER_FALL_KING(10_000.0),
     PINT_HOUSE_KING(8_500.0),
     ELITE_KING(7_000.0),
