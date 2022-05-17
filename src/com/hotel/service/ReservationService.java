@@ -54,6 +54,5 @@ class ReservationService {
                 "room=" + room +
                 '}';
     }
-}
 
 }
