@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
-    <list default="true" id="6f4240ea-3653-4a44-bbd2-8e0575391c9f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_29_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_29_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_30_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_30_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="14af28da-82f6-4f49-8641-950e67087eaa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/IRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/IRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/hotel/menu/MenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/hotel/menu/MenuTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/hotel/model/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/hotel/model/CustomerTest.java" afterDir="false" />
-
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -37,57 +21,53 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-
-  <component name="ProjectId" id="29IUa3zwKJKmj9RkuvUZeJrihBo" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-
-  <component name="ProjectId" id="29JFeDiJYWbMJ6gbFLmZpp3CyMN" />
-
-
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.hotel.resource" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dedc56c9-c9f4-4e94-b467-3f38f550577b" name="Changes" comment="" />
-      <created>1652823375012</created>
+      <changelist id="14af28da-82f6-4f49-8641-950e67087eaa" name="Changes" comment="" />
+      <created>1652827289144</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652823375012</updated>
+      <updated>1652827289144</updated>
+      <workItem from="1652827293273" duration="71000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="menu_v2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
