@@ -1,21 +1,17 @@
 package com.hotel.menu;
 
 import com.hotel.menu.Menu;
-import com.hotel.resource.AdminResource;
-import resources.AdminResource;
-import model.room.Room;
-import model.room.IRoom;
-import model.room.RoomType;
-import model.customer.Customer;
+import com.hotel.model.Customer;
+import com.hotel.model.IRoom;
+import com.hotel.model.RoomType;
+import com.hotel.resource.Admin;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Scanner;
 
-package com.hotel.menu;
-
 public class FrontDesk {
-    private static final AdminResource ADMIN_RESOURCE = AdminResource.getInstance();
+    private static final Admin ADMIN_RESOURCE = Admin.getInstance();
 
     public static void frontDesk() {
         showAdminMenu();

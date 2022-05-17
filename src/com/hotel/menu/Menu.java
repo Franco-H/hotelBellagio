@@ -1,8 +1,9 @@
 package com.hotel.menu;
 
+
+import com.hotel.model.IRoom;
 import com.hotel.model.Reservation;
-import com.hotel.resource.HotelResource;
-import com.hotel.resource.ReservationService;
+import com.hotel.resource.Hotel;
 
 import java.text.ParseException;
 import java.util.Collection;
@@ -13,7 +14,7 @@ import java.text.SimpleDateFormat;
 public class Menu {
     // static field for default MM/dd/yyyy format
     private static final SimpleDateFormat DEFAULT_DATE_FORMAT = new SimpleDateFormat("MM/dd/yyyy");
-    private static final HotelResource hotelResource = HotelResource.getInstance();
+    private static final Hotel HOTEL = Hotel.getInstance();
 
 
     public static void execute() {
@@ -27,7 +28,7 @@ public class Menu {
             while (line.matches("[1-5]")) {
                 switch (line) {
                     case "1":
-                        findAndReserveRoom();
+                        findRoom();
                         break;
                     case "2":
                         viewMyReservation();
@@ -52,7 +53,7 @@ public class Menu {
         }
     }
 
-    private static void findAndReserveRoom() throws ParseException {
+    private static void findRoom() throws ParseException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter check in date (mm/dd/yyyy): ");
@@ -62,23 +63,23 @@ public class Menu {
         String checkOutDate = getDate(scanner);
 
         // With the check in and out dates, iterate through the room collection at ReservationService
-        Collection<IRoom> availableRooms = HotelResource.findARoom(checkInDate, checkOutDate);
+        Collection<IRoom> availableRooms = HOTEL.findARoom(checkInDate, checkOutDate);
 
         // If there is at least one available room, display the available rooms
         if (availableRooms.size() > 0) {
             System.out.println("Available rooms:");
             for (IRoom room : availableRooms) {
                 System.out.println(room.toString());
-                reserve(checkInDate, checkOutDate);
+                reserveRoom(checkInDate, checkOutDate);
             }
         } else {
             System.out.println("No available rooms.");
-            Collection<IRoom> rooms = HotelResource.customerService.findAlternativeRooms(checkInDate, checkOutDate);
+            Collection<IRoom> rooms = HOTEL.findOtherRooms(checkInDate, checkOutDate);
             // If there is
         }
     }
 
-    private static void reserve(String checkInDate, String checkOutDate) {
+    private static void reserveRoom(String checkInDate, String checkOutDate) {
         // Ask if the customer wants to reserve the room
         Scanner scanner = new Scanner(System.in);
         System.out.println("Would you like to reserve a room? (y/n)");
@@ -100,8 +101,8 @@ public class Menu {
                     System.out.println("Enter the room number you would like to reserve: ");
                     String roomNumber = scanner.nextLine();
                     // If the room number match the room number in the collection, reserve the room
-                    IRoom room = hotelResource.getRoom(roomNumber);
-                    Reservation reservation  hotelResource.bookARoom(room, checkInDate, checkOutDate);
+                    IRoom room = HOTEL.getRoom(roomNumber);
+                    Reservation reservation = HOTEL.bookARoom(email, room, checkInDate, checkOutDate);
                     System.out.println("Room reserved. We are looking forward to your stay!");
                     System.out.println(reservation.toString());
                 }
@@ -120,7 +121,7 @@ public class Menu {
         System.out.println("Enter your email: ");
         String email = scanner.nextLine();
 
-        hotelResource.getCustomersReservations(email);
+        HOTEL.getCustomersReservations(email);
     }
 
     private static void createAccount() {
@@ -135,7 +136,7 @@ public class Menu {
 
         // Create a new customer object with the email, first name, last name.
         try {
-            HotelResource.createCustomer(email, firstName, lastName);
+            HOTEL.createCustomer(email, firstName, lastName);
             System.out.println("Thank you for joining us!");
             showMenu();
         } catch (IllegalArgumentException e) {
