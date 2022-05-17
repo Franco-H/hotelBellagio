@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf8833e6-c08b-4466-9778-fd085ca7a217" name="Changes" comment="More updates - Minor change">
+    <list default="true" id="bf8833e6-c08b-4466-9778-fd085ca7a217" name="Changes" comment="SplashApp update">
+      <change afterPath="$PROJECT_DIR$/images/bellagio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/credits.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/BellagioApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/BellagioApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/FrontDesk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/FrontDesk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,20 +30,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="29IUa3zwKJKmj9RkuvUZeJrihBo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -102,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652806028480</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="SplashApp update">
+      <created>1652816817414</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652816817414</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,8 +151,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Updates made on HotelResource and AdminResource Interfaces. Hotel and Admin classes implemented both interfaces with additional methods needed." />
     <MESSAGE value="More updates - Minor change" />
-    <option name="LAST_COMMIT_MESSAGE" value="More updates - Minor change" />
+    <MESSAGE value="SplashApp update" />
+    <option name="LAST_COMMIT_MESSAGE" value="SplashApp update" />
   </component>
 </project>

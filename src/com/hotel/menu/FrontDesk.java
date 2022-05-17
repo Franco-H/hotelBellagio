@@ -1,17 +1,15 @@
 package com.hotel.menu;
 
-import com.hotel.menu.Menu;
 import com.hotel.model.Customer;
 import com.hotel.model.IRoom;
 import com.hotel.model.RoomType;
 import com.hotel.resource.Admin;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class FrontDesk {
-    private static final Admin ADMIN_RESOURCE = Admin.getInstance();
+    private static final Admin ADMIN = Admin.getInstance();
 
     public static void frontDesk() {
         showAdminMenu();
@@ -28,7 +26,7 @@ public class FrontDesk {
                     displayAllRooms();
                     break;
                 case "3":
-                    ADMIN_RESOURCE.displayAllReservations();
+                    ADMIN.displayAllReservations();
                     break;
                 case "4":
                     addRoom();
@@ -46,7 +44,7 @@ public class FrontDesk {
     }
 
     private static void displayAllCustomers() {
-        Collection<Customer> customers = ADMIN_RESOURCE.getAllCustomers();
+        Collection<Customer> customers = ADMIN.getAllCustomers();
         System.out.println("All customers: ");
         // Iterate through the collection and print each customer. If empty, print "No customers"
         if (customers.isEmpty()) {
@@ -59,7 +57,7 @@ public class FrontDesk {
     }
 
     private static void displayAllRooms() {
-        Collection<IRoom> rooms = ADMIN_RESOURCE.getAllRooms();
+        Collection<IRoom> rooms = ADMIN.getAllRooms();
 
         // Iterate through the collection and print each room. If empty, print "No rooms"
         if (rooms.isEmpty()) {
