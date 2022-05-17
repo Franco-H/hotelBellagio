@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dedc56c9-c9f4-4e94-b467-3f38f550577b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/hotel/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/app_utils_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22,_8_29_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22,_8_30_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_29_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_30_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+
+    <list default="true" id="bf8833e6-c08b-4466-9778-fd085ca7a217" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_29_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_29_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_30_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_30_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/RoomType.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +33,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="29JFeDiJYWbMJ6gbFLmZpp3CyMN" />
+
+  <component name="ProjectId" id="29IUa3zwKJKmj9RkuvUZeJrihBo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
