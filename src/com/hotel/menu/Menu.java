@@ -4,9 +4,12 @@ package com.hotel.menu;
 import com.hotel.model.IRoom;
 import com.hotel.model.Reservation;
 import com.hotel.resource.Hotel;
+import com.apps.util.Prompter;
+import com.hotel.service.ReservationService;
 
 import java.text.ParseException;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.text.SimpleDateFormat;
@@ -14,53 +17,47 @@ import java.text.SimpleDateFormat;
 public class Menu {
     // static field for default MM/dd/yyyy format
     private static final SimpleDateFormat DEFAULT_DATE_FORMAT = new SimpleDateFormat("MM/dd/yyyy");
+    private static final Prompter prompter = new Prompter(new Scanner(System.in));
     private static final Hotel HOTEL = Hotel.getInstance();
+    private static final Reservation ReservationService = new ReservationService();
 
+    public void execute() throws ParseException {
 
-    public static void execute() {
-        String line = "";
-        Scanner scanner = new Scanner(System.in);
         showMenu();
+        // Use if statement to check if user input is valid
+        String line = prompter.prompt("Enter a choice: ");
 
-        try {
-            line = scanner.nextLine();
-            // while the input is between 1 and 5
-            while (line.matches("[1-5]")) {
-                switch (line) {
-                    case "1":
-                        findRoom();
-                        break;
-                    case "2":
-                        viewMyReservation();
-                        break;
-                    case "3":
-                        createAccount();
-                        break;
-                    case "4":
-                        FrontDesk.frontDesk();
-                        break;
-                    case "5":
-                        System.out.println("Thank you for visiting Bellagio Las Vegas!");
-                        System.exit(0);
-                        break;
-                    default:
-                        System.out.println("Invalid option");
-                        break;
-                }
+
+        // while the input is between 1 and 5
+        while (line.matches("[1-5]")) {
+            switch (line) {
+                case "1":
+                    findRoom();
+                    break;
+                case "2":
+                    viewMyReservation();
+                    break;
+                case "3":
+                    createAccount();
+                    break;
+                case "4":
+                    FrontDesk.frontDesk();
+                    break;
+                case "5":
+                    System.out.println("Thank you for visiting Bellagio Las Vegas!");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Invalid option");
+                    break;
             }
-        } catch (Exception StringIndexOutOfBoundsException) {
-            System.out.println("Please select a valid option.");
         }
     }
 
     private static void findRoom() throws ParseException {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter check in date (mm/dd/yyyy): ");
-        String checkInDate = getDate(scanner);
-
-        System.out.println("Enter check out date (mm/dd/yyyy): ");
-        String checkOutDate = getDate(scanner);
+        // Prompt user to enter check in and check out dates
+        Date checkInDate = DEFAULT_DATE_FORMAT.parse(prompter.prompt( "Enter check in date (MM/dd/yyyy): "));
+        Date checkOutDate = DEFAULT_DATE_FORMAT.parse(prompter.prompt( "Enter check out date (MM/dd/yyyy): "));
 
         // With the check in and out dates, iterate through the room collection at ReservationService
         Collection<IRoom> availableRooms = HOTEL.findARoom(checkInDate, checkOutDate);
@@ -79,7 +76,7 @@ public class Menu {
         }
     }
 
-    private static void reserveRoom(String checkInDate, String checkOutDate) {
+    private static void reserveRoom(Date checkInDate, Date checkOutDate) {
         // Ask if the customer wants to reserve the room
         Scanner scanner = new Scanner(System.in);
         System.out.println("Would you like to reserve a room? (y/n)");
@@ -126,7 +123,7 @@ public class Menu {
 
     private static void createAccount() {
         Scanner scanner = new Scanner(System.in);
-            // Ask customer to enter email, first name, last name.
+        // Ask customer to enter email, first name, last name.
         System.out.println("Enter your email: ");
         String email = scanner.nextLine();
         System.out.println("Enter your first name: ");
@@ -146,7 +143,7 @@ public class Menu {
 
     }
 
-    private static String getDate(Scanner scanner) throws ParseException {
+    private static String getDate(String scanner) throws ParseException {
         // Check if the date is in the DEFAULT_DATE_FORMAT format and not empty. If not, throw an exception with message.
         String date = scanner.nextLine();
         if (Pattern.matches("^\\d{2}/\\d{2}/\\d{4}$", date) && !date.isEmpty()) {
