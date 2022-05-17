@@ -12,7 +12,7 @@ public interface HotelResource {
     Customer getCustomer(String email);
     void createACustomer(String email, String firstName, String lastName);
     IRoom getRoom(String roomNumber);
-    Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date CheckOutDate));
+    Reservation bookARoom(String email, IRoom room, Date checkInDate, Date CheckOutDate);
     Collection<Reservation> getCustomersReservations(String customerEmail);
     Collection<IRoom> findARoom(Date checkIn, Date checkOut);
 }
