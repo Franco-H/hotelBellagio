@@ -121,7 +121,7 @@ public class Menu {
         System.out.println("Enter your email: ");
         String email = scanner.nextLine();
 
-        hotelResource.getCustomersReservations(email);
+        HOTEL.getCustomersReservations(email);
     }
 
     private static void createAccount() {
@@ -136,7 +136,7 @@ public class Menu {
 
         // Create a new customer object with the email, first name, last name.
         try {
-            HotelResource.createCustomer(email, firstName, lastName);
+            HOTEL.createCustomer(email, firstName, lastName);
             System.out.println("Thank you for joining us!");
             showMenu();
         } catch (IllegalArgumentException e) {

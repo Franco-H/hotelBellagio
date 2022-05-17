@@ -55,6 +55,6 @@ public class Hotel implements HotelResource {
     }
 
     public Collection<IRoom> findOtherRooms(final Date checkIn, final Date checkOut) {
-        return RESERVATION_SERVICE.findAlternativeRooms(checkIn, checkOut);
+        return RESERVATION_SERVICE.findOtherRooms(checkIn, checkOut);
     }
 }
