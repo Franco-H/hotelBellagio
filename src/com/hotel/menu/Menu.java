@@ -1,8 +1,8 @@
 package com.hotel.menu;
 
-import com.hotel.model.Reservation;
-import com.hotel.resource.HotelResource;
-import com.hotel.resource.ReservationService;
+
+import com.hotel.model.IRoom;
+import com.hotel.resource.Hotel;
 
 import java.text.ParseException;
 import java.util.Collection;
@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 public class Menu {
     // static field for default MM/dd/yyyy format
     private static final SimpleDateFormat DEFAULT_DATE_FORMAT = new SimpleDateFormat("MM/dd/yyyy");
-    private static final HotelResource hotelResource = HotelResource.getInstance();
+    private static final Hotel HOTEL = Hotel.getInstance();
 
 
     public static void execute() {
@@ -62,7 +62,7 @@ public class Menu {
         String checkOutDate = getDate(scanner);
 
         // With the check in and out dates, iterate through the room collection at ReservationService
-        Collection<IRoom> availableRooms = HotelResource.findARoom(checkInDate, checkOutDate);
+        Collection<IRoom> availableRooms = HOTEL.findARoom(checkInDate, checkOutDate);
 
         // If there is at least one available room, display the available rooms
         if (availableRooms.size() > 0) {
@@ -73,7 +73,7 @@ public class Menu {
             }
         } else {
             System.out.println("No available rooms.");
-            Collection<IRoom> rooms = HotelResource.customerService.findAlternativeRooms(checkInDate, checkOutDate);
+            Collection<IRoom> rooms = HOTEL.findOtherRooms(checkInDate, checkOutDate);
             // If there is
         }
     }
