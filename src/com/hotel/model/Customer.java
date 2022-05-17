@@ -11,7 +11,10 @@ public class Customer {
 //    private Email email;
 //    private Phone phoneNumber;
 
-    private Customer() {
+    public Customer() {
+    }
+
+    public Customer(String email, String firstName, String lastName) {
     }
 
     public static Customer getInstance(){

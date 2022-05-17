@@ -59,4 +59,7 @@ public class Reservation {
                 "checkIn=" + checkIn + ", " +
                 "checkOut=" + checkOut + ']';
     }
+
+    public void getRoom() {
+    }
 }
