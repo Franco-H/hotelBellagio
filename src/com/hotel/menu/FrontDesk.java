@@ -7,6 +7,7 @@ import com.hotel.model.Room;
 import com.hotel.model.RoomType;
 import com.hotel.resource.Admin;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -18,11 +19,12 @@ public class FrontDesk {
     private static final Prompter prompter = new Prompter(new Scanner(System.in));
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void frontDesk() {
+    public static void frontDesk() throws ParseException {
         showAdminMenu();
 
         // Ask user to enter a choice
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a choice: ");
         String line = scanner.nextLine();
         while (line.matches("[1-5]")) {
             switch (line) {
@@ -39,7 +41,8 @@ public class FrontDesk {
                     addRoom();
                     break;
                 case "5":
-                    Menu.showMenu();
+                    Menu menu = new Menu();
+                    menu.execute();
                     break;
                 default:
                     System.out.println("Invalid option");
@@ -81,7 +84,7 @@ public class FrontDesk {
 
         do {
             RoomType roomType = null;
-
+            scanner.nextLine();
             String roomNumber = prompter.prompt("Enter room number: ");
             // Parse double into integer **
             String roomPrice = prompter.prompt("Enter price per night: ");
@@ -113,7 +116,8 @@ public class FrontDesk {
             rooms.add(room);
             ADMIN.addRoom(rooms);
             do {
-                String addRoomAgain = prompter.prompt("Add another room? (y/n): ");
+                System.out.println("Would you like to add another room? y/n");
+                addRoom = scanner.next().toLowerCase().trim();
             } while (!addRoom.equals("y") && !addRoom.equals("n"));
         } while (addRoom.equals("y"));
     }
