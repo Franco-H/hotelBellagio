@@ -5,43 +5,19 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Reservation {
-//    public static final Reservation instance = new Reservation();
+
     private Customer customer;
-    private Room room;
     private Date checkIn;
     private Date checkOut;
+    private IRoom room;
 
-    public Room getRoom() {
-        return room;
-    }
-
-    public void setRoom(Room room) {
+    public Reservation(Customer customer,IRoom room, Date checkIn, Date checkOut) {
+        this.customer = customer;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
         this.room = room;
     }
 
-    public void setCheckIn(Date checkIn) {
-        this.checkIn = checkIn;
-    }
-
-    public void setCheckOut(Date checkOut) {
-        this.checkOut = checkOut;
-    }
-
-    public Reservation(Customer customer, Room room, Date checkIn, Date checkOut) {
-        setCustomer(customer);
-        setRoom(room);
-        setCheckIn(checkIn);
-        setCheckOut(checkOut);
-    }
-
-    public Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
-    }
-
-    //    private Reservation() {
-//    }
-//    public static Reservation getInstance(){
-//        return instance;
-//    }
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
@@ -50,10 +26,17 @@ public class Reservation {
         return customer;
     }
 
+    public void setRoom(IRoom room) {
+        this.room = room;
+    }
+
+    public IRoom getRoom() {
+        return room;
+    }
+
     public Date getCheckIn() {
         return this.checkIn;
     }
-
 
     public Date getCheckOut() {
         return checkOut;
@@ -79,4 +62,5 @@ public class Reservation {
                 "checkIn=" + checkIn + ", " +
                 "checkOut=" + checkOut + ']';
     }
+
 }
