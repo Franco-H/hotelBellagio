@@ -7,6 +7,7 @@ class Room implements IRoom {
     private int roomNumber;
     private double price;
     private RoomType roomType;
+    private String description;
     private static final double freeRoom = .01;
 
     public Room(int roomNumber, double price, RoomType roomType, String description) {
@@ -22,7 +23,7 @@ class Room implements IRoom {
 //        return instance;
 //    }
 
-    public String getRoomNumber() {
+    public int getRoomNumber() {
         return roomNumber;
     }
 

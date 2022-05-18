@@ -1,7 +1,6 @@
 # IntelliJ metadata files
 .idea/
 *.iml
-.idea/workspace.xml
 # Compiled class file
 *.class
 
