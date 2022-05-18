@@ -1,8 +1,6 @@
 package com.hotel.service;
 
-import com.hotel.model.Customer;
-import com.hotel.model.IRoom;
-import com.hotel.model.Reservation;
+import com.hotel.model.*;
 
 import java.util.*;
 
@@ -99,7 +97,7 @@ public class ReservationService {
     }
 
     public Collection<IRoom> getRoom() {
-        for (IRoom room : room) {
+        for (IRoom room : ) {
             if (room.equals(room.getRoomNumber())) {
             }
         }
