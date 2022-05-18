@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 public class Customer {
 //    public static final Customer instance = new Customer();
     private static final String nameRegexPattern = "^[a-zA-Z0-9]+S";
+    public static Customer instance;
 
     private String firstName;
     private String lastName;
@@ -21,18 +22,18 @@ public class Customer {
     }
 
     // Use regex to validate email
-    public void isValidEmail(String email) {
-        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
-                            "[a-zA-Z0-9_+&*-]+)*@" +
-                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                            "A-Z]{2,7}$";
-
-        Pattern pat = Pattern.compile(emailRegex);
-        // if email is valid, return email. Else throw illegal argument exception
-        if (Objects.isNull(email) || !pat.matcher(email).matches()) {
-            throw new IllegalArgumentException("Invalid email");
-        }
-    }
+//    public void isValidEmail(String email) {
+//        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+//                            "[a-zA-Z0-9_+&*-]+)*@" +
+//                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+//                            "A-Z]{2,7}$";
+//
+//        Pattern pat = Pattern.compile(emailRegex);
+//        // if email is valid, return email. Else throw illegal argument exception
+//        if (Objects.isNull(email) || !pat.matcher(email).matches()) {
+//            throw new IllegalArgumentException("Invalid email");
+//        }
+//    }
 
     public String getFirstName() {
         return firstName;
