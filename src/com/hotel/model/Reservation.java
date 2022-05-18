@@ -7,14 +7,31 @@ import java.util.Objects;
 public class Reservation {
 //    public static final Reservation instance = new Reservation();
     private Customer customer;
-//    private Room room;
+    private Room room;
     private Date checkIn;
     private Date checkOut;
 
-    public Reservation(Customer customer, Date checkIn, Date checkOut) {
-        this.customer = customer;
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public void setCheckIn(Date checkIn) {
         this.checkIn = checkIn;
+    }
+
+    public void setCheckOut(Date checkOut) {
         this.checkOut = checkOut;
+    }
+
+    public Reservation(Customer customer, Room room, Date checkIn, Date checkOut) {
+        setCustomer(customer);
+        setRoom(room);
+        setCheckIn(checkIn);
+        setCheckOut(checkOut);
     }
 
     public Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {

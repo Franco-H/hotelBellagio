@@ -2,7 +2,7 @@ package com.hotel.model;
 
 import java.util.Objects;
 
-class Room implements IRoom {
+public class Room implements IRoom {
 
     private int roomNumber;
     private double price;
