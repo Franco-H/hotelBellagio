@@ -2,6 +2,7 @@ package com.hotel.resource;
 
 import com.hotel.model.Customer;
 import com.hotel.model.IRoom;
+import com.hotel.service.CustomerService;
 
 import java.util.Collection;
 import java.util.List;

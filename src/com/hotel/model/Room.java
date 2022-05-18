@@ -6,7 +6,6 @@ class Room implements IRoom {
 
     private int roomNumber;
     private double price;
-    private String description;
     private RoomType roomType;
     private String description;
     private static final double freeRoom = .01;

@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
-    <list default="true" id="6f4240ea-3653-4a44-bbd2-8e0575391c9f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_29_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_29_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_30_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_17_22__8_30_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="ea402a33-f101-4530-93b3-985f84a2c037" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/IRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/IRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/hotel/menu/MenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/hotel/menu/MenuTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/hotel/model/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/hotel/model/CustomerTest.java" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/Admin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +27,10 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-
-  <component name="ProjectId" id="29IUa3zwKJKmj9RkuvUZeJrihBo" />
+  <component name="ProjectId" id="29JFeDiJYWbMJ6gbFLmZpp3CyMN" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-
-  <component name="ProjectId" id="29JFeDiJYWbMJ6gbFLmZpp3CyMN" />
-
-
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -59,7 +44,6 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -92,5 +76,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
