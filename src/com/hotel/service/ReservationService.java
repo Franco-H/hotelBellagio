@@ -55,7 +55,7 @@ public class ReservationService {
         Collection<Reservation> allReserved = getAllReservedRooms();
         Collection<IRoom> areReserved = new LinkedList<>();
         // for each room in allReserved, if it is not reserved, add it to areReserved
-        for (Reservation reservation : allReserved) {
+        for (IRoom reservation : allReserved) {
             if (!reservation.isReserved(checkIn, checkOut)) {
                 areReserved.add(reservation.getRoom());
             }
@@ -77,6 +77,7 @@ public class ReservationService {
 
     public Collection<Reservation> getCustomersReservation(Customer customer) {
         Collection<Reservation> filteredReservations = new LinkedList<>();
+        Reservation[] reservations = new Reservation[0];
         for (Reservation reservation : reservations) {
             if (reservation.getCustomer().equals(customer)) {
                 filteredReservations.add(reservation);
