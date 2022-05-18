@@ -6,8 +6,8 @@ import com.hotel.resource.HotelResource;
 import java.util.*;
 
 public class CustomerService {
-    public static final Map<String, Customer> customers = new HashMap<>();
     private static final CustomerService CUSTOMER_SERVICE = new CustomerService();
+    private static Collection<Customer> customers;
 
     public CustomerService() {
     }
@@ -17,18 +17,21 @@ public class CustomerService {
     }
 
     public void addCustomer(String email, String firstName, String lastName) {
-        Customer customer = new Customer(email, firstName, lastName);
-        customers.put(email, customer);
+        customers.add(new Customer(firstName, lastName, email));
     }
 
     public Customer getCustomer(String customerEmail) {
-        // return customer email
-        return customers.get(customerEmail);
+        // return null if customerEmail is not found
+        for (Customer customer : customers) {
+            if (customer.getEmail().equals(customerEmail)) {
+                return customer;
+            }
+        }
+        return null;
     }
 
-
     public Collection<Customer> getAllCustomers() {
-        return customers.values();
+        return customers;
     }
 
 }
