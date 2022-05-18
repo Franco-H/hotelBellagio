@@ -13,6 +13,7 @@ public class Room implements IRoom {
     public Room(String roomNumber, String price, RoomType roomType, Boolean isFree) {
         this.roomNumber = roomNumber;
         this.price = price;
+//        this.description = description
         this.roomType = roomType;
         this.isFree = isFree;
 //        this.description = description;
