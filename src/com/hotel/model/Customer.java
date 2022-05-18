@@ -3,30 +3,36 @@ package com.hotel.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
+import java.util.regex.Pattern;
+
 
 public class Customer {
 //    public static final Customer instance = new Customer();
     private static final String nameRegexPattern = "^[a-zA-Z0-9]+S";
+
     private String firstName;
     private String lastName;
-    private String email;
-    private int phoneNumber;
-//    private Email email;
-//    private Phone phoneNumber;
+    private final String email;
 
-    public Customer(String firstName, String lastName, String email, int phoneNumber) {
+    public Customer(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.phoneNumber = phoneNumber;
     }
 
-//    private Customer() {
-//    }
-//
-//    public static Customer getInstance(){
-//        return instance;
-//    }
+    // Use regex to validate email
+    public void isValidEmail(String email) {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                            "[a-zA-Z0-9_+&*-]+)*@" +
+                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                            "A-Z]{2,7}$";
+
+        Pattern pat = Pattern.compile(emailRegex);
+        // if email is valid, return email. Else throw illegal argument exception
+        if (Objects.isNull(email) || !pat.matcher(email).matches()) {
+            throw new IllegalArgumentException("Invalid email");
+        }
+    }
 
     public String getFirstName() {
         return firstName;
@@ -53,24 +59,20 @@ public class Customer {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
 
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String checkEmail(){
-        return getEmail();
-    }
+//    public int getPhoneNumber() {
+//        return phoneNumber;
+//    }
+//
+//    public void setPhoneNumber(int phoneNumber) {
+//        this.phoneNumber = phoneNumber;
+//    }
 
     @Override //verify if == is best practice here. Records created Class
     public boolean equals(Object obj) {
@@ -79,13 +81,12 @@ public class Customer {
         var that = (Customer) obj;
         return this.firstName.equals(that.firstName) &&
                 this.lastName.equals(that.lastName) &&
-                this.email.equals(that.email) &&
-                this.phoneNumber == that.phoneNumber;
+                this.email.equals(that.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, email, phoneNumber);
+        return Objects.hash(firstName, lastName, email);
     }
 
     @Override
@@ -93,7 +94,6 @@ public class Customer {
         return "Customer[" +
                 "firstName=" + firstName + ", " +
                 "lastName=" + lastName + ", " +
-                "email=" + email + ", " +
-                "phoneNumber=" + phoneNumber + ']';
+                "email=" + email + ']';
     }
 }

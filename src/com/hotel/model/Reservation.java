@@ -1,19 +1,23 @@
 package com.hotel.model;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 public class Reservation {
 //    public static final Reservation instance = new Reservation();
     private Customer customer;
 //    private Room room;
-    private LocalDate checkIn;
-    private LocalDate checkOut;
+    private Date checkIn;
+    private Date checkOut;
 
-    public Reservation(Customer customer, LocalDate checkIn, LocalDate checkOut) {
+    public Reservation(Customer customer, Date checkIn, Date checkOut) {
         this.customer = customer;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
+    }
+
+    public Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
     }
 
     //    private Reservation() {
@@ -29,20 +33,13 @@ public class Reservation {
         return customer;
     }
 
-    public LocalDate getCheckIn() {
-        return checkIn;
+    public Date getCheckIn() {
+        return this.checkIn;
     }
 
-    public void setCheckIn(LocalDate checkIn) {
-        this.checkIn = checkIn;
-    }
 
-    public LocalDate getCheckOut() {
+    public Date getCheckOut() {
         return checkOut;
-    }
-
-    public void setCheckOut(LocalDate checkOut) {
-        this.checkOut = checkOut;
     }
 
     @Override

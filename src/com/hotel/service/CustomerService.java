@@ -3,38 +3,32 @@ package com.hotel.service;
 import com.hotel.model.Customer;
 import com.hotel.resource.HotelResource;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
+import java.util.*;
 
-class CustomerService {
-    public static final Collection<Customer> customers = new ArrayList<>();
+public class CustomerService {
+    public static final Map<String, Customer> customers = new HashMap<>();
+    private static final CustomerService CUSTOMER_SERVICE = new CustomerService();
 
-    public void addCustomer(String email, String firstName, String lastName) {
-        Customer customer= new Customer(email, firstName,lastName);
-        customers.add(customer);
-
+    public CustomerService() {
     }
 
-    public Customer getCustomers(String customerEmail) {
-        for (Customer customer : customers){
-            if (customer.getEmail().equals(customerEmail)){
-                return customer;
-            }
-        }
-        return null;
+    public static CustomerService getInstance() {
+        return CUSTOMER_SERVICE;
+    }
+
+    public void addCustomer(String email, String firstName, String lastName) {
+        Customer customer = new Customer(email, firstName, lastName);
+        customers.put(email, customer);
+    }
+
+    public Customer getCustomer(String customerEmail) {
+        // return customer email
+        return customers.get(customerEmail);
     }
 
 
     public Collection<Customer> getAllCustomers() {
-        for (Customer customer : customers){
-            System.out.println(customer);
-        }
-        return customers;
+        return customers.values();
     }
-
-
-
-}
 
 }
