@@ -4,43 +4,26 @@ import java.util.Objects;
 
 public class Room implements IRoom {
 
-    private int roomNumber;
-    private double price;
-    private RoomType roomType;
+    private String roomNumber;
+    private String price;
     private String description;
-    private static final double freeRoom = .01;
+    private RoomType roomType;
+    private boolean isFree;
 
-    public Room(int roomNumber, double price, RoomType roomType, String description) {
+    public Room(String roomNumber, String price, RoomType roomType, Boolean isFree) {
         this.roomNumber = roomNumber;
         this.price = price;
         this.roomType = roomType;
-        this.description = description;
+        this.isFree = isFree;
+//        this.description = description;
     }
-//    private Room() {
-//    }
-//
-//    public Room getInstance() {
-//        return instance;
-//    }
 
-    public int getRoomNumber() {
+    public String getRoomNumber() {
         return roomNumber;
     }
 
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public void setRoomType(RoomType roomType) {
-        this.roomType = roomType;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     @Override
-    public Double getRoomPrice() {
+    public String getRoomPrice() {
         return price;
     }
 
@@ -51,7 +34,7 @@ public class Room implements IRoom {
 
     @Override //Identify condition
     public boolean isFree() {
-        return price < freeRoom;
+        return isFree;
     }
 
 public boolean equals(Object obj) {
