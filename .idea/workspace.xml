@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39f5afa9-b91d-448b-ab6a-68fd5c181b33" name="Changes" comment="Update. Need debug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/FrontDesk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/FrontDesk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/IRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/IRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/HotelResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/HotelResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" afterDir="false" />
-    </list>
+    <list default="true" id="39f5afa9-b91d-448b-ab6a-68fd5c181b33" name="Changes" comment="Update. Need to implement csv loader and modify test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +33,10 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -124,6 +116,14 @@
       <updated>1652839253506</updated>
       <workItem from="1652839255949" duration="11426000" />
     </task>
+    <task id="LOCAL-00001" summary="Update. Need to implement csv loader and modify test">
+      <created>1652894443722</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652894443722</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,5 +140,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update. Need to implement csv loader and modify test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update. Need to implement csv loader and modify test" />
   </component>
 </project>
