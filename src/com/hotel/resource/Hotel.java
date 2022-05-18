@@ -12,8 +12,8 @@ import java.util.Date;
 public class Hotel implements HotelResource {
 
     private static final Hotel HOTEL = new Hotel();
-    private static final CustomerService CUSTOMER_SERVICE = CustomerService.getInstance();
-    private static final ReservationService RESERVATION_SERVICE = ReservationService.getInstance();
+    private CustomerService CUSTOMER_SERVICE = CustomerService.getInstance();
+    private ReservationService RESERVATION_SERVICE = ReservationService.getInstance();
 
     private Hotel() {
     }
@@ -27,7 +27,7 @@ public class Hotel implements HotelResource {
     }
 
     @Override
-    public void createACustomer(String email, String firstName, String lastName) {
+    public void createCustomer(String email, String firstName, String lastName) {
         CUSTOMER_SERVICE.addCustomer(email, firstName, lastName);
     }
 
@@ -38,12 +38,14 @@ public class Hotel implements HotelResource {
 
     @Override
     public Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date checkOutDate) {
-        return RESERVATION_SERVICE.reserveRoom(getCustomer(customerEmail), room, checkInDate, checkOutDate);
+        Customer customer = CUSTOMER_SERVICE.getCustomer(customerEmail);
+        return RESERVATION_SERVICE.reserveRoom(customer, room, checkInDate, checkOutDate);
     }
 
     @Override
     public Collection<Reservation> getCustomersReservations(String customerEmail) {
-        return RESERVATION_SERVICE.getReservation(getCustomer(customerEmail));
+        Customer customer = CUSTOMER_SERVICE.getCustomer(customerEmail);
+        return RESERVATION_SERVICE.getCustomersReservation(customer);
     }
 
     @Override
@@ -51,7 +53,4 @@ public class Hotel implements HotelResource {
         return RESERVATION_SERVICE.findRooms(checkIn, checkOut);
     }
 
-    public Collection<IRoom> findOtherRooms(final Date checkIn, final Date checkOut) {
-        return RESERVATION_SERVICE.findOtherRooms(checkIn, checkOut);
-    }
 }
