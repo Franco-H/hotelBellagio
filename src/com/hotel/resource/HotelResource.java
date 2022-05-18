@@ -10,7 +10,7 @@ import java.util.Date;
 public interface HotelResource {
 
     Customer getCustomer(String email);
-    void createACustomer(String email, String firstName, String lastName);
+    void createCustomer(String email, String firstName, String lastName);
     IRoom getRoom(String roomNumber);
     Reservation bookARoom(String email, IRoom room, Date checkInDate, Date CheckOutDate);
     Collection<Reservation> getCustomersReservations(String customerEmail);
