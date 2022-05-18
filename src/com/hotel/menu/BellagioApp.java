@@ -1,6 +1,6 @@
 package com.hotel.menu;
-import com.apps.util.SplashApp;
 
+import com.apps.util.SplashApp;
 import java.text.ParseException;
 
 class BellagioApp implements SplashApp {

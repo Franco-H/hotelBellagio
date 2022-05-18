@@ -3,58 +3,76 @@ package com.hotel.service;
 import com.hotel.model.Customer;
 import com.hotel.model.IRoom;
 import com.hotel.model.Reservation;
-import com.hotel.resource.AdminResource;
 
-import java.time.LocalDate;
 import java.util.*;
 
 
-class ReservationService {
-    Collection<IRoom> room = new LinkedList<>();
-    Collection<Reservation> reservations = new LinkedList<>();
+public class ReservationService {
+    Map<String, IRoom> rooms = new HashMap<>();
+    Map<String, Collection<Reservation>> customerReservations = new HashMap<>();
 
-    public static final ReservationService reservationService = new ReservationService();
+    public static final ReservationService RESERVATION_SERVICE = new ReservationService();
+    
+    public ReservationService() {
+    }
+    
+    public static ReservationService getInstance() {
+        return RESERVATION_SERVICE;
+    }
 
     public void addRoom(IRoom room) {
-        addRoom(room);
+        rooms.put(room.getRoomNumber(), room);
     }
 
-    public IRoom getARoom(String roomId) {
-        for (IRoom room : room) {
-            if (room.getRoomNumber().equals(roomId)) {
-                return room;
-            }
-        }
-        return null;
+    public IRoom getRoom(String roomNumber) {
+        return rooms.get(roomNumber);
     }
 
-    public Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+    public Reservation reserveRoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+
         Reservation reservation = new Reservation(customer, room, checkInDate, checkOutDate);
-        reservations.add(reservation);
+
+        Collection<Reservation> customerReservations = getReservation(customer);
+
+        // if (customerReservations.size() == 0), make a new list of reservations
+        customerReservations.add(reservation);
         return reservation;
     }
 
-    public Collection<IRoom> findRooms(Date checkIn, Date checkOut) {
-        Collection<IRoom> rooms = new LinkedList<>();
-        Date today = new Date();
-        if (today.after(checkOut)) {
-            System.out.println("Date is invalid. Add future date");
-            return room;
-        }
-        for (IRoom room : rooms) {
-            boolean reserved = false;
-            for (Reservation reservation : reservations) {
-                if (reservation.getRoom() (reservation.getCheckOut().isAfter() {
-                    reserved = true;
-                    break;
+    public Collection<Reservation> getReservation(Customer customer) {
+        return customerReservations.get(customer.getEmail());
+    }
 
-                }
-            }
-            if (!reserved) {
-                addRoom(room);
+    public Collection<IRoom> findRooms(Date checkIn, Date checkOut) {
+        return findRoomsList(checkIn, checkOut);
+    }
+
+    public Collection<IRoom> findOtherRooms(Date checkIn, Date checkOut) {
+        return findRoomsList(checkIn, checkOut);
+    }
+
+    private Collection<IRoom> findAllAvailable(Date checkIn, Date checkOut) {
+        Collection<Reservation> allReserved = getAllReservedRooms();
+        Collection<IRoom> areReserved = new LinkedList<>();
+        // for each room in allReserved, if it is not reserved, add it to areReserved
+        for (Reservation reservation : allReserved) {
+            if (!reservation.isReserved(checkIn, checkOut)) {
+                areReserved.add(reservation.getRoom());
             }
         }
-        return rooms;
+        return areReserved;
+    }
+
+    private boolean isReserved(Reservation reservation, Date checkIn, Date checkOut) {
+        return checkIn.before(reservation.getCheckOut()) && checkOut.after(reservation.getCheckIn());
+    }
+
+    private Collection<IRoom> getAllReservedRooms() {
+        Collection<IRoom> allReserved = new ArrayList<>();
+        for (Collection<Reservation> reservations : customerReservations.values()) {
+            allReserved.addAll(customerReservations);
+        }
+        return allReserved;
     }
 
     public Collection<Reservation> getCustomersReservation(Customer customer) {
@@ -69,15 +87,14 @@ class ReservationService {
 
     public void printAllReservations() {
         System.out.println("This are the available reservations: ");
-
-        if (reservations.isEmpty()) {
-            System.out.println("No Rooms available. Check back later");
+        Collection<IRoom> allReserved = getAllReservedRooms();
+        for (IRoom room : allReserved) {
+            System.out.println(room);
         }
+    }
 
-        for (Reservation reservation : reservations) {
-            System.out.println(reservation);
-        }
-
+    public Collection<IRoom> getAllRooms() {
+        return rooms.values();
     }
 
     public Collection<IRoom> getRoom() {
@@ -86,7 +103,6 @@ class ReservationService {
             }
         }
         return room;
-
     }
 
     @Override
@@ -95,7 +111,6 @@ class ReservationService {
                 "room=" + room +
                 '}';
     }
-
 }
 
 

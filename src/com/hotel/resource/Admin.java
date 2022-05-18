@@ -2,6 +2,8 @@ package com.hotel.resource;
 
 import com.hotel.model.Customer;
 import com.hotel.model.IRoom;
+import com.hotel.service.CustomerService;
+import com.hotel.service.ReservationService;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +34,8 @@ public class Admin implements AdminResource{
 
     @Override
     public Collection<IRoom> getAllRooms() {
-        return RESERVATION_SERVICE.getAllRooms();
+        Collection<IRoom> rooms = RESERVATION_SERVICE.getAllRooms();
+        return rooms;
     }
 
     @Override
@@ -42,6 +45,6 @@ public class Admin implements AdminResource{
 
     @Override
     public void displayAllReservations() {
-        RESERVATION_SERVICE.displayAllReservations();
+        RESERVATION_SERVICE.printAllReservations();
     }
 }
