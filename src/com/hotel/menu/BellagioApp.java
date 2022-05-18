@@ -12,7 +12,11 @@ import java.util.List;
 class BellagioApp {
     public static void main(String[] args) throws IOException {
         Menu menu = new Menu();
-//        RoomLoader roomLoader = new RoomLoader();
+// <<<<<<< main_V2
+// //        RoomLoader roomLoader = new RoomLoader();
+// =======
+//         RoomLoader roomLoader = new RoomLoader();
+// >>>>>>> main
         try{
             Menu.execute();
         }catch (ParseException e){
