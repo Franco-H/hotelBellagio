@@ -1,15 +1,22 @@
 package com.hotel.menu;
 
+import com.apps.util.Prompter;
 import com.hotel.model.Customer;
 import com.hotel.model.IRoom;
+import com.hotel.model.Room;
 import com.hotel.model.RoomType;
 import com.hotel.resource.Admin;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Scanner;
 
 public class FrontDesk {
     private static final Admin ADMIN = Admin.getInstance();
+
+    private static final Prompter prompter = new Prompter(new Scanner(System.in));
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void frontDesk() {
         showAdminMenu();
@@ -58,8 +65,6 @@ public class FrontDesk {
 
     private static void displayAllRooms() {
         Collection<IRoom> rooms = ADMIN.getAllRooms();
-
-        // Iterate through the collection and print each room. If empty, print "No rooms"
         if (rooms.isEmpty()) {
             System.out.println("No rooms.");
         } else {
@@ -71,37 +76,46 @@ public class FrontDesk {
 
     private static void addRoom() {
         // Ask user to enter room number
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter room number: ");
-        String roomNumber = scanner.nextLine();
+        Integer type;
+        String addRoom = null;
 
-        // Ask user to enter room price
-        System.out.println("Enter room price: ");
-        Double roomPrice = setRoomPrice(scanner);
+        do {
+            RoomType roomType = null;
 
-        // Ask user to enter room type
-        System.out.println("Enter room type: ");
-        RoomType roomType = setRoomType(scanner);
-    }
-
-    private static RoomType setRoomType(Scanner scanner) {
-        // Ask user to enter room type. If it is not one of the RoomType enum values, ask again
-        try {
-            return RoomType.valueOf(scanner.nextLine().toUpperCase());
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid room type. Please enter a valid room type.");
-            return setRoomType(scanner);
-        }
-    }
-
-    private static Double setRoomPrice(Scanner scanner) {
-        // Check if the input is a valid number. If not, throw an exception and ask for input again
-        try {
-            return Double.parseDouble(scanner.nextLine());
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a valid number.");
-            return setRoomPrice(scanner);
-        }
+            String roomNumber = prompter.prompt("Enter room number: ");
+            // Parse double into integer **
+            String roomPrice = prompter.prompt("Enter price per night: ");
+            do {
+                // TODO: Add enum for room type
+                System.out.println("Enter room type: ");
+                type = scanner.nextInt();
+                if (type == 1) {
+                    // TODO: Change room type
+                    roomType = RoomType.OVER_LOOKING_WATER_FALL_KING;
+                } else if (type == 2) {
+                    roomType = RoomType.PINT_HOUSE_KING;
+                } else if (type == 3) {
+                    roomType = RoomType.ELITE_KING;
+                } else if (type == 4) {
+                    roomType = RoomType.KING;
+                } else if (type == 5) {
+                    roomType = RoomType.OVER_LOOKING_WATER_FALL_QUEEN;
+                } else if (type == 6) {
+                    roomType = RoomType.PINT_HOUSE_QUEEN;
+                } else if (type == 7) {
+                    roomType = RoomType.QUEEN;
+                } else {
+                    System.out.println("Invalid input");
+                }
+            } while (type != 1 && type != 2 && type != 3 && type != 4 && type != 5 && type != 6 && type != 7);
+            IRoom room = new Room(roomNumber, roomPrice, roomType, true);
+            List<IRoom> rooms = new ArrayList<>();
+            rooms.add(room);
+            ADMIN.addRoom(rooms);
+            do {
+                String addRoomAgain = prompter.prompt("Add another room? (y/n): ");
+            } while (!addRoom.equals("y") && !addRoom.equals("n"));
+        } while (addRoom.equals("y"));
     }
 
     private static void showAdminMenu() {
