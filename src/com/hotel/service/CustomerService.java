@@ -10,18 +10,18 @@ public class CustomerService {
     private static Collection<Customer> customers;
 
     public CustomerService() {
+        customers = new ArrayList<>();
     }
 
     public static CustomerService getInstance() {
         return CUSTOMER_SERVICE;
     }
 
-    public void addCustomer(String email, String firstName, String lastName) {
+    public static void addCustomer(String email, String firstName, String lastName) throws IllegalArgumentException{
         customers.add(new Customer(firstName, lastName, email));
     }
 
     public Customer getCustomer(String customerEmail) {
-        // return null if customerEmail is not found
         for (Customer customer : customers) {
             if (customer.getEmail().equals(customerEmail)) {
                 return customer;
@@ -33,5 +33,4 @@ public class CustomerService {
     public Collection<Customer> getAllCustomers() {
         return customers;
     }
-
 }

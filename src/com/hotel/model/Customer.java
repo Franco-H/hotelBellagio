@@ -3,37 +3,47 @@ package com.hotel.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
+import java.util.Scanner;
 import java.util.regex.Pattern;
 
 
 public class Customer {
 //    public static final Customer instance = new Customer();
     private static final String nameRegexPattern = "^[a-zA-Z0-9]+S";
+    private Scanner scanner = new Scanner(System.in);
     public static Customer instance;
 
     private String firstName;
     private String lastName;
-    private final String email;
+    private String email;
 
     public Customer(String firstName, String lastName, String email) {
+
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
+        this.email = validateEmail(email);
     }
 
-    // Use regex to validate email
-//    public void isValidEmail(String email) {
-//        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
-//                            "[a-zA-Z0-9_+&*-]+)*@" +
-//                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-//                            "A-Z]{2,7}$";
-//
-//        Pattern pat = Pattern.compile(emailRegex);
-//        // if email is valid, return email. Else throw illegal argument exception
-//        if (Objects.isNull(email) || !pat.matcher(email).matches()) {
-//            throw new IllegalArgumentException("Invalid email");
-//        }
-//    }
+    public String validateEmail(String email) {
+        scanner.nextLine();
+        String emailRegex = "^(.+)@(.+).(.+)$";
+        Pattern pat = Pattern.compile(emailRegex);
+        // Use try-catch block to validate email
+        try {
+            if (pat.matcher(email).matches()) {
+                return email;
+            } else {
+                throw new IllegalArgumentException("Invalid email");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid email");
+            // Ask user to enter email again
+            System.out.println("Enter email: ");
+            email = scanner.nextLine();
+            validateEmail(email);
+        }
+        return null;
+    }
 
     public String getFirstName() {
         return firstName;
