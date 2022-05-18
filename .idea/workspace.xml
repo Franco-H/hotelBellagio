@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
     <list default="true" id="ea402a33-f101-4530-93b3-985f84a2c037" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/Book1.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/employee-data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hotel/model/RoomLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hotel/model/testDataCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hotel/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/Admin.java" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/RoomType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -34,11 +35,9 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
@@ -46,11 +45,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\StudentWork\MiniProject\hotelBellagio\data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\StudentWork\MiniProject\hotelBellagio\data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.testDataCSV">
     <configuration name="BellagioApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hotel.menu.BellagioApp" />
       <module name="hotelBellagio" />
@@ -64,8 +72,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RoomLoader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hotel.model.RoomLoader" />
+      <module name="hotelBellagio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hotel.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testDataCSV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hotel.model.testDataCSV" />
+      <module name="hotelBellagio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hotel.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BellagioApp" />
+      <item itemvalue="Application.testDataCSV" />
+      <item itemvalue="Application.RoomLoader" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testDataCSV" />
+        <item itemvalue="Application.RoomLoader" />
         <item itemvalue="Application.BellagioApp" />
       </list>
     </recent_temporary>
