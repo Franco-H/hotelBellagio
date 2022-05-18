@@ -1,7 +1,7 @@
 package com.hotel.model;
 
 public interface IRoom {
-    String getRoomNumber();
+    int getRoomNumber();
     Double getRoomPrice();
     RoomType getRoomType();
     boolean isFree();
