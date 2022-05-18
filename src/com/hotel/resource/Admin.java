@@ -20,6 +20,7 @@ public class Admin implements AdminResource{
     public static Admin getInstance() {
         return ADMIN;
     }
+
     @Override
     public Customer getCustomer(String email) {
         return CUSTOMER_SERVICE.getCustomer(email);
@@ -34,8 +35,8 @@ public class Admin implements AdminResource{
 
     @Override
     public Collection<IRoom> getAllRooms() {
-        Collection<IRoom> rooms = RESERVATION_SERVICE.getAllRooms();
-        return rooms;
+        return RESERVATION_SERVICE.getAllRooms();
+
     }
 
     @Override
@@ -45,6 +46,6 @@ public class Admin implements AdminResource{
 
     @Override
     public void displayAllReservations() {
-        RESERVATION_SERVICE.printAllReservations();
+        RESERVATION_SERVICE.displayAllReservations();
     }
 }

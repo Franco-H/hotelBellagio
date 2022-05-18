@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 public class Customer {
 //    public static final Customer instance = new Customer();
     private static final String nameRegexPattern = "^[a-zA-Z0-9]+S";
+    public static Customer instance;
 
     private String firstName;
     private String lastName;

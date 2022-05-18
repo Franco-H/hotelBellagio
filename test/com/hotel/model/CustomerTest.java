@@ -22,6 +22,6 @@ class CustomerTest {
             e.printStackTrace();
         }
         customer.setPhoneNumber(1112223333);
-        customer.setEmail("test@mail.com");
+        customer.getmail("test@mail.com");
     }
 }
