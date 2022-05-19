@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class RoomLoader {
 
@@ -27,5 +28,18 @@ public class RoomLoader {
         return result;
     }
 
+   // Read from data file and return a list of rooms
+    public void readRooms() throws IOException {
+
+        try {
+            List<String> lines = Files.readAllLines(Path.of("data/room-data.csv"));
+            //Iterate through each line. If there are zero tokens, return false.
+            for (String line : lines) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

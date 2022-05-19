@@ -79,7 +79,7 @@ public class FrontDesk {
 
     private static void addRoom() {
         // Ask user to enter room number
-        Integer type;
+        int type;
         String addRoom = null;
 
         do {

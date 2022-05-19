@@ -82,10 +82,10 @@ public class Menu {
                             if (account.equalsIgnoreCase("y")) {
                                 String email = prompter.prompt("Enter Email format: ");
                                 Customer customer = HOTEL.getCustomer(email);
-                                // print out the rooms
                                 for (IRoom room : rooms) {
                                     System.out.println(room);
                                 }
+
                                 String roomNumber = prompter.prompt("Enter room number: ");
                                 IRoom room = HOTEL.getRoom(roomNumber);
                                 HOTEL.bookARoom(customer.getEmail(), room, checkIn, checkOut);

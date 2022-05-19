@@ -54,7 +54,8 @@ public boolean equals(Object obj) {
     @Override
     public String toString() {
         return "Room[" +
-                "roomNumber=" + roomNumber + ", " +
-                "price=" + price + ']';
+                "roomNumber= " + roomNumber + ", " +
+                "price= " + price +
+                ", roomType= " + roomType +']';
     }
 }

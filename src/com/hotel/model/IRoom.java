@@ -5,5 +5,4 @@ public interface IRoom {
     String getRoomPrice();
     RoomType getRoomType();
     boolean isFree();
-
 }

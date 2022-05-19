@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 public class Hotel implements HotelResource{
 
-    private static final Hotel HOTEL = new Hotel();
+    private static Hotel HOTEL = new Hotel();
     private CustomerService CUSTOMER_SERVICE = CustomerService.getInstance();
     private ReservationService RESERVATION_SERVICE = ReservationService.getInstance();
     private RoomLoader roomLoader = new RoomLoader();
@@ -35,12 +35,6 @@ public class Hotel implements HotelResource{
     }
 
     public IRoom getRoom(String roomNumber) {
-        try {
-            roomLoader.getRooms().forEach(e -> System.out.println(e.getRoomType()));
-            System.out.println();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         return RESERVATION_SERVICE.getRoom(roomNumber);
     }
 

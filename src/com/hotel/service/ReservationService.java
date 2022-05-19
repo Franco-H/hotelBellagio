@@ -81,9 +81,7 @@ public class ReservationService {
         if (reservations.isEmpty()) {
             System.out.println("No reservations found");
         } else {
-            for (Reservation reservation : reservations) {
-                System.out.println(reservation);
-            }
+            System.out.println(reservations);
         }
     }
 }

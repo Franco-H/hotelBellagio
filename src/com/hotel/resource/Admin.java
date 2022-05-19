@@ -36,7 +36,6 @@ public class Admin implements AdminResource{
     @Override
     public Collection<IRoom> getAllRooms() {
         return RESERVATION_SERVICE.getAllRooms();
-
     }
 
     @Override
