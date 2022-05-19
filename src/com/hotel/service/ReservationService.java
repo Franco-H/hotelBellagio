@@ -1,8 +1,6 @@
 package com.hotel.service;
 
-import com.hotel.model.Customer;
-import com.hotel.model.IRoom;
-import com.hotel.model.Reservation;
+import com.hotel.model.*;
 
 import java.util.*;
 
@@ -10,6 +8,7 @@ import java.util.*;
 public class ReservationService {
     Set<IRoom> rooms = new HashSet<>();
     Set<Reservation> reservations = new HashSet<>();
+
     public static ReservationService RESERVATION_SERVICE = new ReservationService();
 
     public ReservationService() {
@@ -25,6 +24,7 @@ public class ReservationService {
 
     public IRoom getRoom(String roomNumber) {
         for (IRoom room : rooms) {
+            System.out.println("ROOM: " + room);
             if (!room.getRoomNumber().equals(roomNumber)) {
                 continue;
             }
