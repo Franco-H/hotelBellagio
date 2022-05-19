@@ -13,7 +13,6 @@ import java.util.List;
 class BellagioApp {
     public static void main(String[] args) throws IOException {
         Menu menu = new Menu();
-
         try{
             Menu.execute();
         }catch (ParseException e){

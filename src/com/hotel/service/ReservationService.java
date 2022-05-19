@@ -1,11 +1,13 @@
 package com.hotel.service;
 
 import com.hotel.model.*;
+import com.hotel.model.RoomLoader;
 
+import java.io.IOException;
 import java.util.*;
 
 
-public class ReservationService {
+public class ReservationService{
     Set<IRoom> rooms = new HashSet<>();
     Set<Reservation> reservations = new HashSet<>();
 
@@ -19,12 +21,12 @@ public class ReservationService {
     }
 
     public void addRoom(IRoom room) {
-        rooms.add(room);
+        RoomLoader.result.add(new Room(room.getRoomNumber(), room.getRoomPrice(), room.getRoomType(), false));
+//        rooms.add(room);
     }
 
     public IRoom getRoom(String roomNumber) {
         for (IRoom room : rooms) {
-            System.out.println("ROOM: " + room);
             if (!room.getRoomNumber().equals(roomNumber)) {
                 continue;
             }
@@ -41,6 +43,13 @@ public class ReservationService {
     }
 
     public Collection<IRoom> findRooms(Date checkIn, Date checkOut) {
+//        RoomLoader roomLoader = new RoomLoader();
+        RoomLoader roomLoader = new RoomLoader();
+        try {
+            roomLoader.getRooms().forEach(e -> System.out.println("findRooms" + e.getRoomNumber()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         if (reservations.isEmpty()) {
             return rooms;
         } else {

@@ -9,8 +9,12 @@ import java.util.Map;
 
 public class RoomLoader {
 
-    private  Path roomsFilePath;
+    private Path roomsFilePath;
     public static  List<Room> result = new ArrayList<>();
+
+    public RoomLoader(){
+        this.roomsFilePath = Path.of("data/room-data.csv");
+    }
 
     public List<Room> getRooms() throws IOException {
 
@@ -28,18 +32,17 @@ public class RoomLoader {
         return result;
     }
 
-   // Read from data file and return a list of rooms
-    public void readRooms() throws IOException {
-
-        try {
-            List<String> lines = Files.readAllLines(Path.of("data/room-data.csv"));
-            //Iterate through each line. If there are zero tokens, return false.
-            for (String line : lines) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    // Read from data file and return a list of rooms
+//    public void readRooms() throws IOException {
+//
+//        try {
+//            List<String> lines = Files.readAllLines(Path.of(("data/room-data.csv")));
+//            //Iterate through each line. If there are zero tokens, return false.
+//            for (String line : lines) {
+//                System.out.println(line);
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
-
