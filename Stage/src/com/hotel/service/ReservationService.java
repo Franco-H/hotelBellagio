@@ -8,17 +8,7 @@ import java.util.*;
 
 
 public class ReservationService{
-    RoomLoader roomLoader = new RoomLoader();
-    Set<IRoom> rooms;
-
-    {
-        try {
-            rooms = new HashSet<>( roomLoader.getRooms());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
+    Set<IRoom> rooms = new HashSet<>();
     Set<Reservation> reservations = new HashSet<>();
 
     public static ReservationService RESERVATION_SERVICE = new ReservationService();
@@ -31,12 +21,13 @@ public class ReservationService{
     }
 
     public void addRoom(IRoom room) {
-        RoomLoader.result.add(new Room(room.getRoomNumber(), room.getRoomPrice(), room.getRoomType(), false));
-//        rooms.add(room);
+        rooms.add(room);
+        RoomLoader.result.add((Room) room);
     }
 
     public IRoom getRoom(String roomNumber) {
         for (IRoom room : rooms) {
+            System.out.println("ROOM: " + room);
             if (!room.getRoomNumber().equals(roomNumber)) {
                 continue;
             }
