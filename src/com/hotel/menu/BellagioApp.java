@@ -3,6 +3,7 @@ package com.hotel.menu;
 //import com.apps.util.SplashApp;
 import com.hotel.model.Room;
 import com.hotel.model.RoomLoader;
+import com.hotel.model.RoomType;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -12,17 +13,14 @@ import java.util.List;
 class BellagioApp {
     public static void main(String[] args) throws IOException {
         Menu menu = new Menu();
-// <<<<<<< main_V2
-// //        RoomLoader roomLoader = new RoomLoader();
-// =======
-//         RoomLoader roomLoader = new RoomLoader();
-// >>>>>>> main
+
         try{
             Menu.execute();
         }catch (ParseException e){
             e.printStackTrace();
         }
     }
+
 //    @Override
 //    public void start() {
 //        Menu menu = new Menu();
