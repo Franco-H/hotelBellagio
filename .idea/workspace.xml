@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="abeebc0d-26fe-4569-8301-35357c689ac9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stage/src/com/hotel/menu/BellagioApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stage/src/com/hotel/menu/BellagioApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stage/src/com/hotel/menu/FrontDesk.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stage/src/com/hotel/menu/FrontDesk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stage/src/com/hotel/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stage/src/com/hotel/resource/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stage/src/com/hotel/resource/AdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/AdminResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stage/src/com/hotel/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stage/src/com/hotel/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/BellagioApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/BellagioApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
