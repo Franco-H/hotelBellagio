@@ -27,13 +27,6 @@ public class Admin implements AdminResource{
     }
 
     @Override
-    public void addRoom(List<IRoom> rooms) {
-        for (IRoom room : rooms) {
-            RESERVATION_SERVICE.addRoom(room);
-        }
-    }
-
-    @Override
     public Collection<IRoom> getAllRooms() {
         return RESERVATION_SERVICE.getAllRooms();
     }
