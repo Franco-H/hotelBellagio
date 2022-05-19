@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d376eee7-18c9-47f5-be01-820ebb77fbf1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Stage/data/room-data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/menu/BellagioApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/menu/FrontDesk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/menu/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/IRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/RoomLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/RoomType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/AdminResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/Hotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/HotelResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/service/ReservationService.java" afterDir="false" />
+    <list default="true" id="abeebc0d-26fe-4569-8301-35357c689ac9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/FrontDesk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/FrontDesk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,59 +10,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="29JFeDiJYWbMJ6gbFLmZpp3CyMN" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="29OOr5miWKL8bi2w9ODi2jv85mX" />
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="ToolWindowRun.ShowToolbar" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/app-utils-1.1.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Console" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\StudentWork\MiniProject\hotelBellagio" />
-      <recent name="C:\StudentWork\MiniProject\hotelBellagio\data" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\StudentWork\MiniProject\hotelBellagio\data" />
-    </key>
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
     <configuration name="BellagioApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -104,17 +50,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="39f5afa9-b91d-448b-ab6a-68fd5c181b33" name="Changes" comment="" />
-      <created>1652839253506</created>
+      <changelist id="abeebc0d-26fe-4569-8301-35357c689ac9" name="Changes" comment="" />
+      <created>1652980861058</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652839253506</updated>
-      <workItem from="1652839255949" duration="11426000" />
+      <updated>1652980861058</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -126,19 +68,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
-          <option name="timeStamp" value="22" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -49,11 +49,6 @@ public class ReservationService{
 
     public Collection<IRoom> findRooms(Date checkIn, Date checkOut) {
         RoomLoader roomLoader = new RoomLoader();
-        try {
-            roomLoader.getRooms().forEach(e -> System.out.println("findRooms" + e.getRoomNumber()));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         if (reservations.isEmpty()) {
             return rooms;
         } else {
