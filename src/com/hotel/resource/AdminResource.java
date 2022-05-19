@@ -9,7 +9,6 @@ import java.util.List;
 
 public interface AdminResource {
     Customer getCustomer(String email);
-    void addRoom(List<IRoom> rooms);
     Collection<IRoom> getAllRooms();
     Collection<Customer> getAllCustomers();
     void displayAllReservations();

@@ -30,11 +30,6 @@ public class ReservationService{
         return RESERVATION_SERVICE;
     }
 
-    public void addRoom(IRoom room) {
-        RoomLoader.result.add(new Room(room.getRoomNumber(), room.getRoomPrice(), room.getRoomType(), false));
-//        rooms.add(room);
-    }
-
     public IRoom getRoom(String roomNumber) {
         for (IRoom room : rooms) {
             if (!room.getRoomNumber().equals(roomNumber)) {
@@ -53,7 +48,6 @@ public class ReservationService{
     }
 
     public Collection<IRoom> findRooms(Date checkIn, Date checkOut) {
-//        RoomLoader roomLoader = new RoomLoader();
         RoomLoader roomLoader = new RoomLoader();
         try {
             roomLoader.getRooms().forEach(e -> System.out.println("findRooms" + e.getRoomNumber()));
