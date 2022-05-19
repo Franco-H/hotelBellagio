@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d376eee7-18c9-47f5-be01-820ebb77fbf1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Stage/data/room-data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/menu/BellagioApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/menu/FrontDesk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/menu/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/IRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/RoomLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/model/RoomType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/AdminResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/Hotel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/resource/HotelResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stage/src/com/hotel/service/ReservationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/BellagioApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/BellagioApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/model/RoomLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/RoomLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/FrontDesk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/FrontDesk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
