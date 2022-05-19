@@ -23,41 +23,50 @@ public class Menu {
 
     public static void execute() throws ParseException {
 
-        showMenu();
-        String line = prompter.prompt("Enter a choice: ");
+        boolean exit = false;
 
-        while (line.matches("[1-5]")) {
-            switch (line) {
-                case "1":
-                    findAndReserve();
-                    break;
-                case "2":
-                    viewMyReservation();
-                    break;
-                case "3":
-                    createAccount();
-                    break;
-                case "4":
-                    FrontDesk.frontDesk();
-                    break;
-                case "5":
-                    System.out.println("Thank you for visiting Bellagio Las Vegas!");
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Invalid option");
-                    break;
-            }
+        while (!exit) {
+            showMenu();
+            String line = prompter.prompt("Enter a choice: ");
+            do {
+                switch (line) {
+                    case "1":
+                        findAndReserve();
+                        break;
+                    case "2":
+                        viewMyReservation();
+                        break;
+                    case "3":
+                        createAccount();
+                        break;
+                    case "4":
+                        FrontDesk.frontDesk();
+                        break;
+                    case "5":
+                        System.out.println("Thank you for visiting Bellagio Las Vegas!");
+                        exit = true;
+                        break;
+                    default:
+                        System.out.println("Invalid option");
+                }
+            } while (!line.matches("[1-5]") && !exit);
         }
     }
 
     private static void findAndReserve() throws ParseException {
-        // Prompt for check in and check out dates, and parse them to DEFAULT_DATE_FORMAT
-        String checkInDate = prompter.prompt("Enter check in date (MM/dd/yyyy): ");
-        String checkOutDate = prompter.prompt("Enter check out date (MM/dd/yyyy): ");
+        System.out.println("Enter check in date (MM/dd/yyyy): ");
+        // If user enters the check in date before today's date,
+        // the system will prompt the user to enter a valid date.
+        Date checkIn = validateDate(scanner);
 
-        Date checkIn = DEFAULT_DATE_FORMAT.parse(checkInDate);
-        Date checkOut = DEFAULT_DATE_FORMAT.parse(checkOutDate);
+        System.out.println("Enter check out date (MM/dd/yyyy): ");
+        Date checkOut = validateDate(scanner);
+
+//        String checkInDate = prompter.prompt("Enter check in date (MM/dd/yyyy): ");
+//        String checkOutDate = prompter.prompt("Enter check out date (MM/dd/yyyy): ");
+//
+//        Date checkIn = DEFAULT_DATE_FORMAT.parse(checkInDate);
+//        Date checkOut = DEFAULT_DATE_FORMAT.parse(checkOutDate);
         Date today = DEFAULT_DATE_FORMAT.parse(DEFAULT_DATE_FORMAT.format(Calendar.getInstance().getTime()));
 
         if (!checkIn.before(today) && !checkOut.before(checkIn)) {
@@ -95,9 +104,32 @@ public class Menu {
                 } while (!book.equalsIgnoreCase("y") && !book.equalsIgnoreCase("n"));
             } else {
                 System.out.println("No rooms available");
+                String exit;
+                do {
+                    exit = prompter.prompt("Would you like to exit? (y/n)");
+                    if (exit.equalsIgnoreCase("y")) {
+                        System.exit(0);
+                    } else if (exit.equalsIgnoreCase("n")) {
+                        execute();
+                    } else {
+                        System.out.println("Invalid option");
+                    }
+                } while (!exit.equalsIgnoreCase("y") && !exit.equalsIgnoreCase("n"));
             }
         } else {
             System.out.println("Invalid date");
+        }
+    }
+
+    private static Date validateDate(Scanner scanner) throws ParseException {
+        // If input is not in the correct format, keep asking for input
+        while (true) {
+            String date = scanner.nextLine();
+            try {
+                return DEFAULT_DATE_FORMAT.parse(date);
+            } catch (ParseException e) {
+                System.out.println("Invalid date format. Please enter a date in the format MM/dd/yyyy");
+            }
         }
     }
 

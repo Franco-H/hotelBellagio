@@ -11,10 +11,6 @@ public class RoomLoader {
     private  Path roomsFilePath;
     public static  List<Room> result = new ArrayList<>();
 
-    public RoomLoader() {
-        this.roomsFilePath = Path.of("data/room-data.csv");
-    }
-
     public List<Room> getRooms() throws IOException {
 
         Files.lines(roomsFilePath).forEach(line -> {
@@ -32,3 +28,4 @@ public class RoomLoader {
     }
 
 }
+
