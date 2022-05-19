@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/com/hotel/menu/BellagioApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/menu/BellagioApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hotel/model/RoomLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/model/RoomLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hotel/resource/HotelResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/resource/HotelResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hotel/service/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,19 +120,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/hotel/menu/Menu.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/hotel/menu/Menu.java</url>
-          <line>23</line>
-          <properties class="com.hotel.menu.Menu" method="execute">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="22" />

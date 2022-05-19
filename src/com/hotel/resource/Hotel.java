@@ -17,7 +17,6 @@ public class Hotel implements HotelResource{
     private static Hotel HOTEL = new Hotel();
     private CustomerService CUSTOMER_SERVICE = CustomerService.getInstance();
     private ReservationService RESERVATION_SERVICE = ReservationService.getInstance();
-    private RoomLoader roomLoader = new RoomLoader();
 
     private Hotel() {
     }
